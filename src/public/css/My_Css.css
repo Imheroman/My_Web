@@ -1,9 +1,3 @@
-/* .center{
-    text-align:center;
-    
-} */
-/* .header-set{ */
-
 header {
     padding: 1rem;
     text-align: center;
@@ -13,37 +7,17 @@ header {
     color: indianred;
     font-size: 50px; 
 }
-
-/* input:-ms-input-placeholder {color:#a8a8a8;}
-input::-webkit-input-placeholder {color:#a8a8a8;}
-input::-moz-input-placeholder {color:#a8a8a8;} */
-input:-ms-input-placeholder {color: darkgrey;}
+/* input:-ms-input-placeholder {color: darkgrey;}
 input::-webkit-input-placeholder {color: darkgrey;}
-input::-moz-input-placeholder {color: darkgrey;}
-
-/* #sub {
-    background-color: gray;
-    color: white;
-} */
-
-.pic {
-
-}
+input::-moz-input-placeholder {color: darkgrey;} */
 
 .search_div-set {
-    /* align: center; */
-    /* margin-top: 1rem;
-    margin-left: 33rem;
-    margin-bottom: 5rem; */
-    /* position: absolute;
-    left: 30%; */
     position: relative;
     margin-bottom: 0.5rem;
     left: 71.7%;
 	height: 40px;
     width: 400px;
     border: 1px solid salmon;
-    /* background: #ffffff; */
     background: whitesmoke;
 }
 
@@ -57,7 +31,8 @@ input::-moz-input-placeholder {color: darkgrey;}
 	float: left;
 }
 
-.search_btn {
+
+.search_btn { /* 정보 검색을 위한 css */
 	width: 50px;
 	height: 100%;
 	border: 0px;
@@ -68,11 +43,11 @@ input::-moz-input-placeholder {color: darkgrey;}
     cursor: pointer;
 }
 
-.button-set {
+/* .button-set {
     background-color: gray;
     color: white;
     float: right;
-}
+} */
 
 [type="radio"] {
     vertical-align: middle;
@@ -87,14 +62,8 @@ input::-moz-input-placeholder {color: darkgrey;}
 [type="radio"]:checked {
 border: 0.4em solid indianred;
 }
-  
-  /* [type="radio"]:focus-visible {
-    outline-offset: max(2px, 0.1em);
-    outline: max(2px, 0.1em) dotted tomato;
-  } */
 
 hr {
-/* background-color: tomato; */
 border: 0;
 color: gray;
 background-color: gray;
@@ -135,11 +104,15 @@ height: 1.5px;
     background-color:gray;
     color:white;
 }
+
+
+
+
+
   
 /* page 부분 시작*/
 .paging {
     text-align: center;
-    /* font-size: 0; */
 }
 
 .paging li {
