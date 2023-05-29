@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "I'd like to make a web which I wanted, I will use html, node.js, jsp etc.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/www.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imheroman/My_Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Imheroman/My_Web/issues"
+  },
+  "homepage": "https://github.com/Imheroman/My_Web#readme"
+}

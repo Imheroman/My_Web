@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontello-618b9dc2/fontello-618b9dc2/css/fontello.css">
+    <link rel = "stylesheet" href = "My_Css.css"> 
+    <title>좋사좋시</title>
+
+    <style>
+                
+        header { text-align: center;}
+
+        body {background-color: whitesmoke}
+
+        section{margin-bottom: 3rem;}
+
+        #menubar {background : black;}
+
+        #menubar ul {
+            margin : 0;
+            padding : 0;
+            width : 100%; }
+
+        #menubar ul li {
+            display : inline-block; 
+            list-style-type : none; 
+            padding : 0px 105px;
+            }
+
+        #menubar ul li a { 
+            color : white;
+            text-decoration : none; }
+
+        #menubar ul li a:hover { color : red; }
+
+        img {  
+            margin: 15px;
+            border-radius: 0.6rem;
+
+            -webkit-transform:scale(1);
+            -moz-transform:scale(1);
+            -ms-transform:scale(1); 
+            -o-transform:scale(1);  
+            transform:scale(1);
+            -webkit-transition:.3s;
+            -moz-transition:.3s;
+            -ms-transition:.3s;
+            -o-transition:.3s;
+            transition:.3s;
+        }
+
+        img:hover {
+            -webkit-transform:scale(1.2);
+            -moz-transform:scale(1.2);
+            -ms-transform:scale(1.2);   
+            -o-transform:scale(1.2);
+            transform:scale(1.2);
+        }
+
+        #footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: whitesmoke;
+            color:black;
+            text-align: center;
+            line-height: 40px;
+        
+        }   
+
+
+        
+        #deemed {width:100%; height:100%; position:fixed; top:0; left:0; filter:Alpha(opacity=50);opacity:0.5; background:#000; z-index:1;}
+        
+        #layerPop1 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop1 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop2{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop2 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop3{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop3 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop4{width:650px; height:250px;; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop4 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop5 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop5 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop6{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop6 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop7{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop7 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop8{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop8 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop9 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop9 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop10{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop10 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop11{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop11 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop12{width:650px; height:250px; position:fixed;; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop12 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop13 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop13 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop14{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop14 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop15{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop15 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop16{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop16 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop17 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop17 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop18{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop18 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop19{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop19 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop20{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop20 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop21 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop21 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop22{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop22 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop23{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop23 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop24{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop24 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop25{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop25 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop26{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop26 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop27{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop27 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop28{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop28 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop29{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop29 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop30 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop30 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop31{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop31 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop32{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop32 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop33{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop33 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop34 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop34 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop35{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop35 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop36{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop36 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop37{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop37 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop38{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop38 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop39{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop39 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop40{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop40 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop41 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop41 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop42{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop42 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop43{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop43 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop44{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop44 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop45{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop45 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop46{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop46 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop47{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop47 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop48 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop48 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop49{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop49 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop50{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop50 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop51{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop51 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop52{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop52 .close{position:absolute; bottom:5px;right:5px;}
+
+
+    </style> 
+
+    <script type="text/javascript">
+    function dEI(elementID){
+    return document.getElementById(elementID);
+    }
+    function openLayer(IdName, tpos, lpos){
+    var pop = dEI(IdName);
+    pop.style.top = tpos + "%";
+    pop.style.left = lpos + "%";
+    pop.style.display = "block";
+
+    var wrap = dEI("wrapper");
+    var reservation = document.createElement("div");
+    reservation.setAttribute("id", "deemed");
+    wrap.appendChild(reservation);
+    }
+    function closeLayer( IdName ){
+    var pop = dEI(IdName);
+    pop.style.display = "none";
+    var clearEl=parent.dEI("deemed");
+    var momEl = parent.dEI("wrapper");
+    momEl.removeChild(clearEl);
+    }
+    </script>
+
+</head>
+
+
+<body>  
+    <header>
+        <a id="logo"> <h1 class = "title-set"> 광주 </h1> </a>
+        <!-- <img src="사진\logo.png" height="150px" > -->
+    </header>
+
+    <div class = "search_div-set">
+        <input class = "input-set" id = "search_seoul" type = "text" placeholder = "검색을 원하는 밥집명을 입력하시오.">
+        <button class = "search_btn">검색</button>
+    </div>
+     
+    <nav id="menubar">
+        <ul style="text-align: center; background-color: indianred;">
+            <li><a href="My_Intro.html" style = "color: wheat;"> Introduce </a></li>
+            <li><a href="Seoul.html" style = "color: white;"> Seoul </a></li>
+            <li><a href="Gwangju.html" style = "color: white;"> Gwangju </a></li>
+            <li><a href="Jeju.html" style = "color: white;"> Jeju </a></li>
+        </ul>
+    </nav>
+       
+    <section>
+        <script> var ret = alert("광주 페이지로 이동합니다."); </script>
+
+        <center>
+            <div id="wrapper">
+                <a href="#" onclick="openLayer('layerPop1',35 ,29)"><img src="image/Gwangju_image/돈까스틱.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop1">
+                    <h3> 돈까스틱 </h3>
+                    <p>진희's pick</p>
+                    <p>
+                    과콰몰리랑 페페론치노가 조화롭게 어울린다.
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 돈까스틱 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop1')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop2',35 ,29)"><img src="image/Gwangju_image/아우내순대.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop2">
+                    <h3> 아우내순대 </h3>
+                    <p>진희's pick</p>
+                    <p>
+                    과콰몰리랑 페페론치노가 조화롭게 어울린다.
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 아우내순대 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop2')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop3',35 ,29)"><img src="image/Gwangju_image/피나치공.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop3">
+                    <h3> 피나치공 </h3>
+                    <p>진희's pick</p>
+                    <p>
+                    과콰몰리랑 페페론치노가 조화롭게 어울린다.
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 피나치공 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop3')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop4',35 ,29)"><img src="image/Gwangju_image/1515짜장면.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop4">
+                    <h3> 1515짜장면 </h3>
+                    <p>진희's pick</p>
+                    <p>
+                    과콰몰리랑 페페론치노가 조화롭게 어울린다.
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 1515짜장면 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop4')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop5',35 ,29)"><img src="image/Gwangju_image/상무초밥.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop5">
+                    <h3> 상무초밥 </h3>
+                    <p>진희's pick</p>
+                    <p>
+                    과콰몰리랑 페페론치노가 조화롭게 어울린다.
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 상무초밥 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop5')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop6',35 ,29)"><img src="image/Gwangju_image/소코아.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop6">
+                    <h3> 소코아 </h3>
+                    <p>진희's pick</p>
+                    <p>
+                    과콰몰리랑 페페론치노가 조화롭게 어울린다.
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 소코아 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop6')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop7',35 ,29)"><img src="image/Gwangju_image/엄마네 돼지찌개.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop7">
+                    <h3> 엄마네 돼지찌개 </h3>
+                    <p>진희's pick</p>
+                    <p>
+                    과콰몰리랑 페페론치노가 조화롭게 어울린다.
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 엄마네 돼지찌개 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop7')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop8',35 ,29)"><img src="image/Gwangju_image/윤끼.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop8">
+                    <h3> 윤끼 </h3>
+                    <p>진희's pick</p>
+                    <p>
+                    과콰몰리랑 페페론치노가 조화롭게 어울린다.
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 윤끼 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop8')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <ol class = "paging">
+                    <li class = "first"><a href = "#a">첫페이지</a></li>
+                    <li class = "prev"><a href = "#a">이전페이지</a></li>
+                    <li class = "on"><a href = "#a">1</a></li>
+                    <li><a href = "#a">2</a></li>
+                    <li><a href = "#a">3</a></li>
+                    <li class = "next"><a href = "#a">다음페이지</a></li>
+                    <li class = "last"><a href = "#a">마지막페이지</a></li>
+                </ol>
+            </div>
+        </center>
+    </section>
+
+    <footer>
+        <div id="footer">
+            <strong> <small> Open_Source_SoftWare_Project - 김영웅 </small> </strong>
+        </div>             
+    </footer>
+
+</body>
+
+</html>

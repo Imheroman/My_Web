@@ -1,0 +1,218 @@
+<!-- https://github.com/saemmilee/restaurantReviews-html5 -->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="fontello-618b9dc2/fontello-618b9dc2/css/fontello.css">
+        <title>좋사좋시</title>
+
+        <style>
+            
+            body {background-color: whitesmoke}
+            
+            /* header { 
+                text-align: center;
+                padding: 1rem;
+                } */
+
+            section{margin: 5rem;}
+
+            #answer{
+                padding: 3rem;
+                margin-bottom: 5rem;
+                border: 2px solid black;
+            }
+
+            #menubar {background : black;}
+
+            #menubar ul {
+                margin : 0;
+                padding : 0;
+                width : 100%; }
+
+            #menubar ul li {
+                display : inline-block; 
+                list-style-type : none; 
+                padding : 0px 105px;
+                }
+
+            #menubar ul li a { 
+                color : white;
+                text-decoration : none; }
+
+            #menubar ul li a:hover { color : red; }
+
+            #intro{
+                margin: 5rem;
+                text-align: center;
+            }
+
+        
+            #footer{
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                background-color: whitesmoke;
+                color:black;
+                text-align: center;
+                line-height: 40px;
+                
+            }  
+
+            @keyframes rotation {
+                from { transform: rotate(0deg);}
+                to {transform: rotate(360deg);}
+            }
+
+            #logo img:hover {
+                animation-name: rotation;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            
+
+
+            </style>
+        <link rel = "stylesheet" href = "My_Css.css"> <!-- css추가 -->
+
+        <script>
+            function search_btn() { // search 버튼에서 값 읽어오는 함수
+                // const myButton = document.getElementById("searchbtn");
+                const txtbox = document.getElementById("search_location");
+
+                if (txtbox != null) {
+                    alert(txtbox.value + "를 검색합니다.");
+                }
+
+
+                // myButton.addEventListener('click', () => {
+                //     event.preventDefault();
+                //     console.log('제출이 완료되었습니다.');
+                //     alert("submit works");
+                // });
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+            <a id="logo"> <h1 class = "title-set"> 좋은 사람과.. 좋은 시간.. </h1> </a>
+        </header>
+
+
+        <nav id="menubar">
+
+            <ul style="text-align: center; background-color: indianred;">
+                <li><a href="My_Intro.html" style = "color: wheat;"> Introduce </a></li>
+                <li><a href="Seoul.html" style = "color: white;"> Seoul </a></li>
+                <!-- <li><a href="Gwangju.html" style = "color: white;"> Gwangju </a></li>
+                <li><a href="Jeju.html" style = "color: white;"> Jeju </a></li> -->
+            </ul>
+        </nav>
+
+
+        <section>
+            <div id="intro">
+                <h4>Open Source를 이용하여 만들게 된 웹사이트 입니다.<br>
+                웹 제작을 처음 접해봐서 어려울 것 같지만 만들어 보고 싶었던 웹사이트 이기에<br>
+                최선을 다해 만들어 보겠습니다. 부족하지만 재밌게 봐주시면 감사하겠습니다. <br>
+                <!-- <span>"샘미의 맛따라 멋따라"</span>입니다. -->
+                </h4>
+            </div>  
+
+            <div id="answer">
+                <h3>웹페이지 이용 전 간단한 이용 안내</h3>
+                <br><br>
+
+                1. 현재 서울, 광주, 제주 지역의 정보만 제공하고 있습니다.
+                <br><br><br><!-- 줄바꿈 -->
+                2. 원하는 지역의 밥집 정보는 위의 카테고리를 클릭하여 들어가시면 탐색 가능합니다.
+                <!-- <hr> 라인 생성 -->
+                <!-- <form action="/action_page.php" method="get"> -->
+                
+
+                
+
+                <!-- <details>
+                        <summary>사전 조사 결과</summary>
+                            <P style="text-align: center">
+                            1번에 4개 중 하나라도 선택한 사람 <br>
+                            +<br>
+                            2번에 둘 중 하나라도 선택한 사람 <br>
+                            (특히 NO를 선택한 사람) <br>
+                            = <br>
+                            <b><em>당신은 맛따라 멋따라 이용이 시급하신 분입니다!!!!!</em></b>
+                            </P>
+                </details> -->
+            </div>
+                
+            <!-- <div id="table">
+                <table>
+                
+                <tr><td><b><i>"샘미의 맛따라 멋따라"에서 예상되는 궁금한 점!!</b></i></tr></td>
+                <tr><td><br></tr></td>
+                
+                <tr><td>
+                <details>
+                        <summary><b><i>음식 사진의 출처들은?</i></b></summary>
+                            <P>
+                            웹 페이지의 음식 사진들의 출처는 제가 직접 찍은 것이거나 지인들이 직접 찍은 것들입니다.  
+                            </P>
+                </details>
+                </tr></td>
+                        
+                <tr><td>
+                <details>
+                    <summary><b><i>"맛따라 멋따라"라는 제목은?</i></b></summary>
+                        <P>
+                            "맛따라 멋따라"라는 용어를 들어보신 분들도 있겠지만 없으신 분들을 위해 설명해드리겠습니다.<br>
+                            맛따라 멋따라는 "치즈인더트랩"이라는 웹툰에서 나온 용어로 주인공들이 맛집을 찾을 때 사용합니다.<br>
+                            저는 이러한 곳에서 아이디어를 얻어 웹페이지의 제목을 짓게 되었습니다. 
+                        </P>
+                </details>
+                </tr></td>
+
+                <tr><td>
+                <details>
+                    <summary><b><i>한줄평의 객관성?</i></b></summary>
+                        <P>
+                        저의 웹페이지는 저의 개인적인 생각에서 나온 한줄평, 저의 지인들의 개인적인 생각에서 나온 한줄평이므로<br>
+                        객관적인 것은 아닙니다. 
+                        </P>
+                </details>
+                </tr></td>
+
+                <tr><td>
+                    <details>
+                        <summary><b><i>링크가 없는 사진들의 이유는?</i></b></summary>
+                            <P>
+                            저는 NAVER를 기준으로 등록되지 않은 음식점은 링크를 걸어두지 않았습니다.
+                            </P>
+                    </details>
+                    </tr></td>
+            
+                </table>
+            </div> -->
+        </section>
+
+
+        <footer>
+            <div id="footer">
+                <strong>
+                    <small>Open_Source_SoftWare_Project - 김영웅</small>
+                    <!-- <p>Open_Source_SoftWare_Project - 김영웅</p> -->
+                </strong>
+            </div>         
+        </footer>
+
+        
+    </body>
+
+</html>

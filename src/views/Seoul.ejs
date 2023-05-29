@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontello-618b9dc2/fontello-618b9dc2/css/fontello.css">
+    <link rel = "stylesheet" href = "My_Css.css"> 
+    <title>좋사좋시</title>
+
+    <style>
+                
+        header { text-align: center;}
+
+        body {background-color: whitesmoke}
+
+        section{margin-bottom: 3rem;}
+
+        #menubar {background : black;}
+
+        #menubar ul {
+            margin : 0;
+            padding : 0;
+            width : 100%; }
+
+        #menubar ul li {
+            display : inline-block; 
+            list-style-type : none; 
+            padding : 0px 105px;
+            }
+
+        #menubar ul li a { 
+            color : white;
+            text-decoration : none; }
+
+        #menubar ul li a:hover { color : red; }
+
+        img {  
+            margin: 15px;
+            border-radius: 0.6rem;
+
+            -webkit-transform:scale(1);
+            -moz-transform:scale(1);
+            -ms-transform:scale(1); 
+            -o-transform:scale(1);  
+            transform:scale(1);
+            -webkit-transition:.3s;
+            -moz-transition:.3s;
+            -ms-transition:.3s;
+            -o-transition:.3s;
+            transition:.3s;
+        }
+
+        img:hover {
+            -webkit-transform:scale(1.2);
+            -moz-transform:scale(1.2);
+            -ms-transform:scale(1.2);   
+            -o-transform:scale(1.2);
+            transform:scale(1.2);
+        }
+
+        #footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: whitesmoke;
+            color:black;
+            text-align: center;
+            line-height: 40px;
+        }   
+
+
+        
+        #deemed {width:100%; height:100%; position:fixed; top:0; left:0; filter:Alpha(opacity=50);opacity:0.5; background:#000; z-index:1;}
+        
+        #layerPop1 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop1 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop2{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop2 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop3{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop3 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop4{width:650px; height:250px;; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop4 .close{position:absolute; bottom:5px;right:5px;}
+
+
+
+        #layerPop5 {width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100; border-radius:20px;}
+        #layerPop5 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop6{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop6 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop7{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop7 .close{position:absolute; bottom:5px;right:5px;}
+
+        #layerPop8{width:650px; height:250px; position:fixed; padding:10px; border:4px solid #eee; background:#fff; display:none; z-index:100;border-radius:20px;}
+        #layerPop8 .close{position:absolute; bottom:5px;right:5px;}
+    </style> 
+
+    <script type="text/javascript">
+        
+    function dEI(elementID){
+    return document.getElementById(elementID);
+    }
+
+    function openLayer(IdName, tpos, lpos){
+    var pop = dEI(IdName);
+    pop.style.top = tpos + "%";
+    pop.style.left = lpos + "%";
+    pop.style.display = "block";
+
+    var wrap = dEI("wrapper");
+    var reservation = document.createElement("div");
+    reservation.setAttribute("id", "deemed");
+    wrap.appendChild(reservation);
+    }
+
+    function closeLayer( IdName ){
+    var pop = dEI(IdName);
+    pop.style.display = "none";
+    var clearEl=parent.dEI("deemed");
+    var momEl = parent.dEI("wrapper");
+    momEl.removeChild(clearEl);
+    }
+
+    function get_data() {
+        var txt = document.getElementById("search_seoul").value;
+
+        return txt;
+    }
+
+    function search_click() {
+        txt = get_data();
+        alert(txt + "를 검색합니다.");
+        
+        var name = ["랜디스도넛", "골목식당", "런던베이글뮤지엄", "마루심", "마포옥", "서울큰입탕", "수퍼", "조박집"];
+        var html_url = ["randys.html", "Golmok.html", "London.html", "Marusim.html", "Mapok.html", "Bigmouse.html", "souper.html", "Jobak.html"];
+        // var id = ["layerPop1", "layerPop2", "layerPop3", "layerPop4", "layerPop5", "layerPop6", "layerPop7", "layerPop8", "layerPop9"];
+        var count = 0;
+        var pos;
+
+        for (var i = 0; i < name.length; i++) {
+            if (name[i] == txt) {
+                count++;
+                pos = i;
+            }
+        }
+        
+        if(count == 0) {
+            alert(txt + "이 없습니다. 네이버에서 검색합니다.");
+            
+            var url = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=" + txt + "&oquery=네이버지도&tqi=hJHcDwprvxsssLqr7HlssssstfC-121929";
+            window.open(url, "_blank");
+
+            return;
+        }
+
+        else {
+            alert(txt + " 정보가 " + ++pos + "번째 사진에 있습니다.");
+
+            var address = "http://127.0.0.1:5500/" + html_url[--pos];
+            // alert("address is " + address);
+            window.open(address, "_blank");
+
+            return;
+        }
+        
+    }
+    </script>
+</head>
+
+
+<body>  
+    <header>
+        <a id="logo"> <h1 class = "title-set"> 서울 </h1> </a>
+    </header>
+
+    <form action = "#" mothod = "get">
+        <div class = "search_div-set">
+            <input class = "input-set" id = "search_seoul" type = "text" placeholder = "검색을 원하는 밥집명을 입력하시오." list = “search_Option”>
+            <datalist id = “search_Option”>
+                <!-- <option value = 골목식당 /> -->
+                <option value = 골목식당 />
+                <option value = 랜디스도넛 />
+                <option value = 런던베이글뮤지엄 />
+                <option value = 마루심 />
+                <option value = 마포옥 />
+                <option value = 서울큰입탕 />
+                <option value = 수퍼 />
+                <option value = 승 />
+                <option value = 조박집 />
+                <option value = 품미 />
+            </datalist>
+            
+            <button title = "클릭하여 검색" class = "search_btn" onclick = search_click()>검색</button>
+        </div>
+    </form>
+     
+    <nav id="menubar">
+        <ul style="text-align: center; background-color: indianred;">
+            <li><a href="My_Intro.html" style = "color: wheat;"> Introduce </a></li>
+            <li><a href="Seoul.html" style = "color: white;"> Seoul </a></li>
+        </ul>
+    </nav>
+
+    <br>
+       
+    <section>
+        <script> var ret = alert("서울 페이지로 이동합니다."); </script>
+
+        <center>
+            <div id="wrapper">
+                <a href="#" onclick="openLayer('layerPop1',35 ,29)"><img src="image/Seoul_image/랜디스도넛.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop1">
+                    <h3> 랜디스 도넛 </h3>
+                    <p>
+                        <br>
+                        아이언맨 영화에 나와서 유명한 도넛이다.<br>
+                        매우 단 맛이 일품임
+                        <br><br><br><br>
+                    </p>
+                    <a href="https://map.naver.com/v5/search/서울%20랜디스%20도넛/place/1543986977?placePath=%3Fentry=pll%26from=nx%26fromNxList=true" target="_blank">
+                            NAVER 랜디스 도넛 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop1')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop2',35 ,29)"><img src="image/Seoul_image/골목식당.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop2">
+                    <h3> 골목식당 </h3>
+                    <p>
+                        <br>
+                        백반기행에도 나온 을지로의 맛집이다.<br>
+                        보쌈 맛집이라고 한다.
+                        <br><br><br><br>
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/1135558904?placePath=%2Fhome&c=14136028.0737516,4518160.6265030,15,0,0,0,dh" target="_blank">
+                            NAVER 골목식당 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop2')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop3',35 ,29)"><img src="image/Seoul_image/런던베이글뮤지엄.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop3">
+                    <h3> 런던베이글뮤지엄 </h3>
+                    <p>
+                        <br>
+                        방송에도 나와서 테이크 아웃을 해도 웨이팅을 할 수도 있다고 한다.<br>
+                        핫플임.
+                        <br><br><br><br>
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/1466975947?c=14120264.2956590,4518382.0005604,10,0,0,0,dh" target="_blank">
+                            NAVER 런던베이글뮤지엄 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop3')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop4',35 ,29)"><img src="image/Seoul_image/마루심.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop4">
+                    <h3> 마루심 </h3>
+                    <p>
+                        <br>
+                        유명 연예인들도 많이 다녀간 장어덮밥 맛집!<br>
+                        웨이팅이 길다고 한다.<br>
+                        가격은 비싸지만 장어를 좋아하면 한 번 식사해보러 가봐도 좋을 듯 하다.
+                        <br><br><br><br>
+                    </p>
+                    <a href="https://map.naver.com/v5/search/마루심/place/20206990?c=14137820.1586460,4509301.8981109,15,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">
+                            NAVER 마루심 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop4')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop5',35 ,29)"><img src="image/Seoul_image/마포옥.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop5">
+                    <h3> 마포옥 </h3>
+                    <p>
+                        <br>
+                        서울 마포구에 있는 3대 설렁탕집<br>
+                        6년 연속 미쉘린 가이드에 선정된 맛집<br>
+                        주차장이 부족한 서울에 주차장도 있어서 가족끼리 가기에도 좋다고 생각한다.<br>
+                        <br><br><br><br>
+                    </p>
+                    <a href="https://map.naver.com/v5/search/마포옥/place/11707372?c=14130332.1365006,4514630.2849778,15,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">
+                            NAVER 마포옥 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop5')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop6',35 ,29)"><img src="image/Seoul_image/서울큰입탕.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop6">
+                    <h3> 서울큰입탕 </h3>
+                    <p>
+                        <br>
+                        아귀찜과 해물찜을 파는 식당<br>
+                        한식을 좋아하는 사람들에게 잘 어울릴 것 같다.
+                        <br><br><br><br>
+                    </p>
+                    <a href="https://map.naver.com/v5/entry/place/37111500?c=14129820.4344572,4183582.2374840,13,0,0,0,dh&placePath=%2Fhome&entry=plt" target="_blank">
+                            NAVER 서울큰입탕 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop6')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop7',35 ,29)"><img src="image/Seoul_image/수퍼.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop7">
+                    <h3> 수퍼 </h3>
+                    <p>
+                        <br>
+                        스프와 샌드위치를 함꼐 먹을 수 있는 음식점이라고 한다.<br>
+                        송이송이 트러플 비스크가 진국이니 꼭 먹어보면 좋겠다.
+                        <br><br><br><br>
+                    </p>
+                    <a href="https://map.naver.com/v5/search/souper/place/1323350702?c=14130768.9653144,4514461.9023456,15,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">
+                            NAVER 수퍼 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop7')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <a href="#" onclick="openLayer('layerPop8',35 ,29)"><img src="image/Seoul_image/조박집.jpeg" width="300px" height="300px" ></a>
+                <div id="layerPop8">
+                    <h3> 조박집 </h3>
+                    <p>
+                        <br>
+                        수요미식회와 맛있는 녀석들 이라는 프로그램에서 촬영을 했다고 한다.<br>
+                        마포구에 있는 고기 맛집!
+                        <br><br><br><br>
+                    </p>
+                    <a href="https://map.naver.com/v5/search/조박집/place/11679456?c=14130392.3714773,4514631.6046455,15,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">
+                            NAVER 조박집 더 알아보기
+                    </a>
+                    <a href="#" onclick="closeLayer('layerPop8')" class="close"><input type="button" value="close"></a>
+                </div>
+
+                <ol class = "paging">
+                    <li class = "first"><a href = "#a">첫페이지</a></li>
+                    <li class = "prev"><a href = "#a">이전페이지</a></li>
+                    <li class = "on"><a href = "#a">1</a></li>
+                    <li><a href = "#a">2</a></li>
+                    <li><a href = "#a">3</a></li>
+                    <li class = "next"><a href = "#a">다음페이지</a></li>
+                    <li class = "last"><a href = "#a">마지막페이지</a></li>
+                </ol>
+            </div>
+        </center>
+    </section>
+
+    <footer>
+        <div id="footer">
+            <strong> <small> Open_Source_SoftWare_Project - 김영웅 </small> </strong>
+        </div>             
+    </footer>
+
+</body>
+
+</html>
